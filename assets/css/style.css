@@ -1,8 +1,102 @@
-/* style sheet */
-body {    
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 3rem;
-    color: #999999;
-    padding: 100px;
+/*----- CSS style sheet -----*/
+
+/*-- root section --*/
+:root {
+    --black: black;
+    --silver: silver;
+    --navy: navy;
+    --white: white;
+    --blue: blue;
 }
+
+/*-- universal section --*/
+* { /* TBD */ }
+
+
+/*-- body section --*/
+body {    
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #999999;
+}
+
+/*-- header & nav section --*/
+header { 
+    margin: 0; 
+    padding-top: 20px; 
+    height: 60px; 
+}
+
+header h1 {
+    width: 55%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    width: 45%;
+    float: left;
+    height: 20px;
+}
+
+nav ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 15px;
+    overflow: hidden; 
+    /* the border below is for testing - commented out */
+    /* border: 1px solid red; */
+    text-align: right;
+}
+
+nav li {
+    display: inline;
+    margin: 0;
+    padding: 0; 
+    height: 50px;    
+}
+
+nav li a {
+    color: var(--navy);
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+
+nav li a:hover {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 3px solid var(--blue);
+    background-color: var(--navy);
+    padding: 15px;
+}
+
+/*-- main content sections --*/
+main {
+    padding-top: 50px;
+}
+
+section {
+    height: auto;
+    min-height: 110px;
+    margin: 40px 0 100px 0;
+    /* the border below is for testing - commented out */
+    /* border: 1px solid red; */
+}
+
+.sec-title {
+    width: 15%;
+    text-align: right;
+    float: left;
+    padding: 20px;
+    border-right: 5px solid var(--navy);
+}
+
+.sec-content {
+    width: 75%;
+    float: left;
+    padding: 20px;
+}
+
+/*-- Media Queries will go here --*/
