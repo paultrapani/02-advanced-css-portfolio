@@ -1,0 +1,9 @@
+/* style sheet */
+
+.whatever {    
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 4rem;
+    color: #999999;
+    padding: 100px;
+}
