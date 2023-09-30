@@ -4,73 +4,109 @@
 :root {
     --black: black;
     --silver: silver;
+    --gray: #999;
     --navy: navy;
     --white: white;
     --blue: blue;
+    --0-marg: 0px; 
+    --0-pad: 0px;
+    --15-pad: 15px;
+    --20-pad: 20px;
 }
 
-/*-- universal section --*/
-* { /* TBD */ }
+
+/*-- universal styles section --*/
+* {
+    color: var(--gray);
+}
 
 
 /*-- body section --*/
 body {    
     font-family:'Courier New', Courier, monospace;
     font-size: 1rem;
-    color: #999999;
+    color: var(--gray);
 }
+
 
 /*-- header & nav section --*/
 header { 
-    margin: 0; 
+    margin: 0 4em 0 4em; 
     padding-top: 20px; 
     height: 60px; 
 }
 
 header h1 {
-    width: 55%;
-    float: left;
-    margin: 0;
-    padding: 0;
-}
-
-nav {
     width: 45%;
     float: left;
+    margin: var(--0-marg);
+    padding: var(--0-pad);
+}
+
+#page-name, #page-subt {
+    display: inline;
+    width: 100%;
+    text-align: center;
+    text-align: left;
+    /* the border below is for testing - commented out */
+    /* border: 1px solid aqua; */
+}
+
+#page-name {
+    font-size: 1.25em;
+    color: var(--navy);
+}
+#page-subt {
+    font-size: .75em;
+}
+     
+nav {
+    width: 55%;
+    white-space: nowrap;
+    float: left;
     height: 20px;
+    /* the border below is for testing - commented out */
+    /* border: 1px solid violet; */
 }
 
 nav ul { 
     list-style-type: none;
-    margin: 0;
-    padding: 15px;
-    overflow: hidden; 
+    margin: var(--0-marg);
+    padding: var(--15-pad);
+    text-align: right;
+    overflow: visible;
     /* the border below is for testing - commented out */
     /* border: 1px solid red; */
-    text-align: right;
 }
 
 nav li {
-    display: inline;
+    display: inline-block;
     margin: 0;
     padding: 0; 
-    height: 50px;    
+    height: 50px;
+    font-size: 1.25em;
+    font-weight: bold;
 }
 
 nav li a {
-    color: var(--navy);
     text-decoration: none;
-    padding: 15px;
+    padding: var(--15-pad);
     text-align: center;
+    color: var(--navy);
 }
 
 nav li a:hover {
     color: var(--white);
     text-decoration: none;
-    border-bottom: 3px solid var(--blue);
+    border-radius: 8px;
     background-color: var(--navy);
-    padding: 15px;
+    padding: var(--15-pad);
+    /* the border styles  below are for testing - commented out */
+    /* border-bottom: 4px solid var(--silver);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; */
 }
+
 
 /*-- main content sections --*/
 main {
@@ -79,24 +115,181 @@ main {
 
 section {
     height: auto;
-    min-height: 110px;
     margin: 40px 0 100px 0;
+    padding: 0 6em 0 0;
     /* the border below is for testing - commented out */
     /* border: 1px solid red; */
 }
 
 .sec-title {
-    width: 15%;
+    float: left;
+    padding: var(--20-pad);
+    /* background-color: bisque; */
+    height: auto;
+    max-width: 25%;
+    min-width: 200px;
+    height: 100%;
+    /* min-height: 432px; */
+    /* border-right: 5px solid var(--navy); */
+}
+
+.sec-title h1 {
+    margin: var(--0-marg);
     text-align: right;
-    float: left;
+}
+    
+/* the fexl-cont class is for laying out spacing between items and positioning of items inside the container */ 
+.flex-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    gap: 1.5em;
     padding: 20px;
-    border-right: 5px solid var(--navy);
+    background-color: var(--silver);
+    border-left: 8px solid var(--navy);
 }
 
-.sec-content {
-    width: 75%;
-    float: left;
-    padding: 20px;
+/* the fexl-item styles define how each flex item will look in the container */ 
+.flex-item {
+    flex: 1 0 200px;
+    padding: var(--15-pad);
+    border: 1px solid var(--gray);
+    background-color: #f1f1f1;
 }
 
-/*-- Media Queries will go here --*/
+.flex-item p {
+    margin: var(--0-marg);
+}
+
+
+/* flex item styles specific to examples of my design work */
+.item-work-1 {
+    /*--- this is a royalty free image from adobe stock used as temporary placeholder only (real work image coming soon) ----*/
+    background-image: url('../images/placeholder-design-sample.jpg'); 
+    background-size: cover;
+    height: 200px;
+}
+
+.item-work-2 {
+    /*--- this is a royalty free image from adobe stock used as temporary placeholder only (real work image coming soon) ----*/
+    background-image: url('../images/placeholder-design-sample.jpg');
+    background-size: cover;
+    height: 200px;
+}
+
+.item-work-3 {
+    /*--- this is a royalty free image from adobe stock used as temporary placeholder only (real work image coming soon) ----*/
+    background-image: url('../images/placeholder-design-sample.jpg');
+    background-size: cover;
+    height: 200px;
+}
+
+.item-work-4 {
+    /*--- this is a royalty free image from adobe stock used as temporary placeholder only (real work image coming soon) ----*/
+    background-image: url('../images/placeholder-design-sample.jpg');
+    background-size: cover;
+    height: 200px;
+}
+
+.item-work-5 {
+    /*--- this is a royalty free image from adobe stock used as temporary placeholder only (real work image coming soon) ----*/
+    background-image: url('../images/placeholder-design-sample.jpg');
+    background-size: cover;
+    height: 200px;
+}
+
+/* flex item styles specific to my contact information */
+.item-contact-1 {
+    /* TBD */
+}
+
+.item-contact-2 {
+    /* TBD */
+}
+
+.item-contact-3 {
+    /* TBD */
+}
+
+
+ /*------- MEDIA QUERY:  Tablets - header changes color ---------*/
+@media screen and (max-width: 992px) {
+
+    header { 
+        margin: var(--0-marg);
+        height: auto; 
+    }
+
+    header h1 {
+        width: 100%;
+        float: none;
+        margin: var(--0-marg);
+        padding: var(--0-pad);
+        text-align: center;
+    }
+    
+    #page-name, #page-subt {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        /* the border below is for testing - commented out */
+        /* border: 1px solid fuchsia; */
+    }
+
+    nav {
+        width: 100%;
+        float: none;        
+        text-align: center;
+        margin-top: 25px;        
+        display: block;
+        height: 50px;
+        /* the border below is for testing - commented out */
+        /* border: 1px solid yellowgreen; */
+    }
+    
+    nav ul { 
+        text-align: center;
+        margin: auto;
+        display: block;
+        /* the border below is for testing - commented out */
+        /* border: 1px solid blue; */
+    }
+
+    nav li {
+        padding: var(--0-pad);
+        margin: var(--0-marg);
+        height: auto;
+        font-size: 1em;
+        /* the border below is for testing - commented out */
+        /* border: 1px solid red; */
+    }
+
+    main { 
+        padding-top: var(--0-pad);
+    } 
+  }
+  
+
+  /*------- MEDIA QUERY:  Large smartphones - navbar changes color --------*/
+  @media screen and (max-width: 768px) {
+
+    section {
+        height: auto;
+        /* min-height: 272px; */
+        margin: 20px 0 20px 0;
+        padding: 0;
+        /* the border below is for testing - commented out */
+        /* border: 1px solid purple; */
+    }
+
+    .sec-title {
+        float:none;
+        max-width: 100%;
+    }
+    
+    .sec-title h1 {
+        text-align: center;
+    }
+    
+  }
