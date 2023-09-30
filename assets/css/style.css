@@ -20,6 +20,10 @@
     color: var(--gray);
 }
 
+a {
+color: var(--navy);
+text-decoration: none;
+}
 
 /*-- body section --*/
 body {    
@@ -111,6 +115,7 @@ nav li a:hover {
 /*-- main content sections --*/
 main {
     padding-top: 50px;
+    /* padding-bottom: 500px; */
 }
 
 section {
@@ -162,6 +167,35 @@ section {
     margin: var(--0-marg);
 }
 
+/* portfolio item titles */ 
+#work .flex-item {
+    cursor: pointer;
+}
+
+#work .flex-item span {
+    display: block;
+    position: relative;
+    color: var(--white);
+    padding: 15px;
+    max-width: 70%;
+    min-width: 170px;
+    top: 75px;
+    left: -15px;
+    background:rgba(0, 0, 128, 0.65); 
+    /* portfolio item title background color with transparency/opacity */
+    /* box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.55); */
+}
+
+/* portfolio item hover effects */ 
+#work .flex-item:hover {
+    border: 1px solid rgba(0, 0, 128, 0.65); 
+}
+
+#work .flex-item:hover span {
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.55);
+    font-weight: bold;
+}
+
 
 /* flex item styles specific to examples of my design work */
 .item-work-1 {
@@ -200,17 +234,15 @@ section {
 }
 
 /* flex item styles specific to my contact information */
-.item-contact-1 {
-    /* TBD */
+.item-contact a:hover {
+    font-weight: bold;   
 }
 
-.item-contact-2 {
-    /* TBD */
+/* .item-contact-2 {
 }
 
 .item-contact-3 {
-    /* TBD */
-}
+} */
 
 
  /*------- MEDIA QUERY:  Tablets - header changes color ---------*/
